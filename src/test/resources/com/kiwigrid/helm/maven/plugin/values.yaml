@@ -1,0 +1,32 @@
+# Default values for acquiring-services.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+services:
+  enabled: false
+
+  gateway:
+    enabled: false
+    image:
+      repository: vikings/gateway
+      tag: 6a30fea8bb8673d65b5d69a14ec8d787c1ef1ac4
+  auth-server:
+    enabled: true
+    contextPath: /uaa
+    image:
+      repository: vikings/auth-server
+      tag: 5129612be4b095c8f9a7ac87303c5039361f6f6c
+  merchant-service:
+    enabled: true
+    image:
+      repository: vikings/merchant-service
+      tag: 5129612be4b095c8f9a7ac87303c5039361f6f6c
+  card-usage-service:
+    enabled: false
+    image:
+services:
+  service1: service-nr1
+  service2: service-nr2
+
+global:
+  enabled: false
